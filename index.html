@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Popup Demo</title>
+    <!-- <link rel="stylesheet" href="/css/aftermarket.css"> -->
+</head>
+
+<body>
+
+
+
+    <script type="module">
+        import 'https://web3.chainparency.com/components/after-market-popup.js'
+    </script>
+
+    <div>
+        <button id="popup-button" type="button" onclick="function pop(e) { console.log('pop clicked'); document.querySelector('#popup').show(); }; pop(); return false;">View Certificate</button>
+        <after-market-popup id="popup" orgID="aHtm782bf4B1so7sCXuj" amID="EMqsuSZXXfsPiPwS0QfL"></after-market-popup>
+    </div>
+
+    <script>
+        // This way works and the inline way above works
+        document.querySelector("#popup-button").addEventListener("click", () => {
+            console.log('click2')
+            // let pop = document.querySelector("#popup")
+            // pop.show()
+        })
+    </script>
+</body>
+
+</html>
